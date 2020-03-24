@@ -1,4 +1,4 @@
-package com.modal;
+package com.cognizant.modal;
 
 import java.util.Set;
 
@@ -14,25 +14,31 @@ public class Skill {
 	@Id
 	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	private Integer id;
-	private String name;
 	
+	private String name;
+
 	@ManyToMany(mappedBy = "skillList")
 	private Set<Employee> employeeList;
+
 	public Integer getId() {
 		return id;
 	}
+
 	public void setId(Integer id) {
 		this.id = id;
 	}
+
 	public String getName() {
 		return name;
 	}
+
 	public void setName(String name) {
 		this.name = name;
 	}
+
 	@Override
 	public String toString() {
-		return "Skill [id=" + id + ", name=" + name + "]";
+		return "Skill id = "+ id +"\nSkill name = "+ name;
 	}
-	
+
 }

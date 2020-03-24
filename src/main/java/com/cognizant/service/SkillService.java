@@ -1,11 +1,11 @@
-package com.service;
+package com.cognizant.service;
 
 import javax.transaction.Transactional;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import com.modal.Skill;
+import com.cognizant.modal.Skill;
 
 @Service
 public class SkillService {
@@ -15,10 +15,16 @@ public class SkillService {
 
 	@Transactional
 	public void save(Skill skill) {
+
 		skillRepository.save(skill);
+
 	}
+
 	@Transactional
-	public Skill get(Integer id) {
-		return skillRepository.findById(id).get();
+	public Skill get(Integer skillId) {
+
+		return skillRepository.findById(skillId).get();
+
 	}
+
 }

@@ -1,4 +1,4 @@
-package com.modal;
+package com.cognizant.modal;
 
 
 import java.io.Serializable;
@@ -77,6 +77,4 @@ public class Stock implements Serializable {
 		return "Stock [st_id=" + st_id + ", date=" + date + ", open=" + open + ", close=" + close + ", volume=" + volume
 				+ "]";
 	}
-	
-	
 }
